@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+while True;
+do
+    echo 123
+done
+
+if True; then
+    echo 123
+fi
+######
