@@ -18,6 +18,7 @@ filesdir="${rootdir}/serverfiles"
 systemdir="${filesdir}"
 
 tmp_dir="${rootdir}/tmp"
+tmpdir="${filesdir}/tmp"
 
 #cfg
 servercfg="${servicename}.cfg"

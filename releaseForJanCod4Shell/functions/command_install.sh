@@ -27,7 +27,7 @@ if [ -z "${autoinstall}" ]; then
         while true; do
             read -e -i "y" -p "Install the cod 4 server in your linux:[y|n]" yn
             case ${yn} in
-                [Yn]*)
+                [Yy]*)
                     break;;
                 [Nn]*)
                     exit 0;;
@@ -39,8 +39,9 @@ if [ -z "${autoinstall}" ]; then
 fi
 
 #build the dir if the dir does not exited
-if [ ! -d ${filesdir} ]; then
+if [ ! -d ${filesdir} ] || [ ! -d ${tmpdir} ]; then
 	mkdir -pv "${filesdir}";
+	mkdir -pv "${tmpdir}"
 fi
 
 sleep 1
@@ -70,6 +71,16 @@ if [ -d "${rootdir}/Steam/logs" ]; then
 fi
 
 fn_script_log_info "Logs installed"
+
+check_deps.sh
+
+echo ""
+echo "Installing serverfiles"
+echo "================================="
+sleep 1
+
+install_server_files.sh
+
 
 
 
