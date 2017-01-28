@@ -10,7 +10,7 @@ source ./functions/core_message.sh
 
 fn_getopt_generic(){
     case "${getopt}" in
-        i|install|ai)
+        i|install)
 		    command_install.sh;;
 		ai|auto-install)
 		    fn_autoinstall;;
@@ -32,6 +32,7 @@ fn_getopt_generic(){
 	    	echo -e "${blue}stop\t${default}sp |Stop the server."
 	    	#echo -e "${blue}restart\t${default}r  |Restart the server."
 	    	echo -e "${blue}install\t${default}i  |Install the server."
+	    	echo -e "${blue}auto-install\t${default}ai  |Install the server."
 	    } | column -s $'\t' -t
 	esac
 }

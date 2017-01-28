@@ -48,6 +48,8 @@ fix.sh(){
 fn_autoinstall(){
     autoinstall=1
     command_install.sh
+    #functionfile="command_install.sh"
+    #source ${functionsdir}/${functionfile}
 }
 
 

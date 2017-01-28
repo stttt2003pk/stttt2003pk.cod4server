@@ -95,7 +95,7 @@ fn_fetch_file(){
 # Extracts bzip2 or gzip or zip files
 # Extracts can be defined in code like so:
 # fn_dl_extract "${filedir}" "${filename}" "${extractdir}"
-# fn_dl_extract "/home/gameserver/lgsm/tmp" "file.tar.bz2" "/home/gamserver/serverfiles"
+# fn_dl_extract "/home/gameserver/serverfiles/tmp" "file.tar.bz2" "/home/gamserver/serverfiles"
 fn_dl_extract(){
 	filedir="${1}"
 	filename="${2}"

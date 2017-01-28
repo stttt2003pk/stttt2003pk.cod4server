@@ -7,7 +7,7 @@ clear
 
 echo "================================="
 echo "call of duty 4 server"
-echo "stttt2003pk linux game server cstrike"
+echo "stttt2003pk linux game server cod4"
 echo "by stttt2003pk"
 echo "stttt2003pk@gmail.com"
 echo "================================="
