@@ -15,6 +15,7 @@ rootdir="$(dirname $(readlink -f "${BASH_SOURCE[0]}"))"
 selfname="$(basename $(readlink -f "${BASH_SOURCE[0]}"))"
 functionsdir="${rootdir}/functions"
 filesdir="${rootdir}/serverfiles"
+configdir="${rootdir}/server_config"
 systemdir="${filesdir}"
 
 tmp_dir="${rootdir}/tmp"
@@ -33,6 +34,8 @@ executable="./cod4x18_dedrun"
 logdays="7"
 gamelogdir="${rootdir}/logs"
 scriptlogdir="${rootdir}/log/script"
+consolelogdir="${rootdir}/log/console"
+consolelog="${consolelogdir}/${servicename}-console.log"
 
 scriptlog="${scriptlogdir}/${servicename}-script.log"
 

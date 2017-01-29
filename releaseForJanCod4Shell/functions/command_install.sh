@@ -58,6 +58,8 @@ else
 	mkdir -pv "${rootdir}/log"
 	mkdir -pv "${scriptlogdir}"
 	touch "${scriptlog}"
+	mkdir -pn "${consolelogdir}"
+	touch "${consolelog}"
 fi
 
 if [ ! -h "${rootdir}/log/server" ]; then
@@ -81,6 +83,12 @@ sleep 1
 
 install_server_files.sh
 
+echo ""
+echo "Installing server default config"
+echo "================================="
+sleep 1
+
+install_config.sh
 
 
 
