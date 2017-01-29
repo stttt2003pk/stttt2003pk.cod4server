@@ -47,7 +47,7 @@ fi
 sleep 1
 
 #build the log if the log did not exited
-if [ -d ${scriptlogdir} ]; then
+if [ -d ${scriptlogdir} ] && [ -d ${consolelogdir} ]; then
 	fn_print_dots "Checking for log files"
 	sleep 0.3
 	fn_print_info_nl "Checking for log files: log files exists"
@@ -58,18 +58,8 @@ else
 	mkdir -pv "${rootdir}/log"
 	mkdir -pv "${scriptlogdir}"
 	touch "${scriptlog}"
-	mkdir -pn "${consolelogdir}"
+	mkdir -pv "${consolelogdir}"
 	touch "${consolelog}"
-fi
-
-if [ ! -h "${rootdir}/log/server" ]; then
-	ln -nfsv "${gamelogdir}" "${rootdir}/log/server"
-fi
-
-if [ -d "${rootdir}/Steam/logs" ]; then
-	if [  ! -h "${rootdir}/log/steamcmd" ]; then
-		ln -nfsv "${rootdir}/Steam/logs" "${rootdir}/log/steamcmd"
-	fi
 fi
 
 fn_script_log_info "Logs installed"

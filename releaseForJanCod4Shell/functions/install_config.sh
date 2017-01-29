@@ -11,11 +11,11 @@ defaultconfig="${defaultconfidir}/cod4-server.cfg"
 servercfgfullpath="${servercfgdir}/cod4-server.cfg"
 
 fn_cp_config_file() {
-    if [ -z "${defaultconfig}" ]; then
+    if [ -f "${defaultconfig}" ]; then
         echo "Please Get The Default Config File"
         exit 2
     else
-        if [ "${gamename}" == "Call of Duty 4" ]; then
+        if [ "${gamename}" == "Call of Duty 4" ] && [ ! -f ${servercfgfullpath} ]; then
             cp -v "${defaultconfig}" "${servercfgfullpath}"
         fi
     fi
@@ -23,7 +23,6 @@ fn_cp_config_file() {
 
 fn_set_config_vars() {
     echo "Default Cod 4 Default Cfg do not need to set"
-    pass
 }
 
 fn_cp_config_file

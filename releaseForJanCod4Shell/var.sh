@@ -6,6 +6,8 @@
 
 # Server Details
 servicename="cod4-server"
+# In call of duty 4 servername = servicename
+servername=${servicename}
 gamename="Call of Duty 4"
 engine="iw3.0"
 version="170110"
