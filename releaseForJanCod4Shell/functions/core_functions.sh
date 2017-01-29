@@ -45,11 +45,21 @@ fix.sh(){
 	source ${functionsdir}/${functionfile}
 }
 
+command_details.sh() {
+    functionfile="${FUNCNAME}"
+	source ${functionsdir}/${functionfile}
+}
+
 fn_autoinstall(){
     autoinstall=1
     command_install.sh
     #functionfile="command_install.sh"
     #source ${functionsdir}/${functionfile}
+}
+
+info_distro.sh() {
+    functionfile="${FUNCNAME}"
+	source ${functionsdir}/${functionfile}
 }
 
 

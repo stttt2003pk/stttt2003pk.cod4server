@@ -51,3 +51,5 @@ port="28960"
 clientport="27005"
 defaultmap="mp_crossfire"
 maxplayers="32"
+
+parms="+set sv_punkbuster 0 +set fs_basepath ${filesdir} +set dedicated 1 +set net_ip ${ip} +set net_port ${port} +set sv_maxclients ${maxclients} +exec ${servercfg} +map ${defaultmap}"

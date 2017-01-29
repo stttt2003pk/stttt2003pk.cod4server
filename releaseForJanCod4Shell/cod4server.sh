@@ -18,6 +18,8 @@ fn_getopt_generic(){
 		    command_start.sh;;
 	    sp|stop)
 		    command_stop.sh;;
+		de|details)
+		    command_details.sh;;
 	    *)
 	    if [ -n "${getopt}" ]; then
 		    echo -e "${red}Unknown command${default}: $0 ${getopt}"
