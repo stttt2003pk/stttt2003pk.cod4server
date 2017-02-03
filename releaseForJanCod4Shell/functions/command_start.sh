@@ -25,6 +25,7 @@ fn_start_tmux(){
     if [ "${status}" == "0" ]; then
         fn_script_log_info "Rotating log files"
         mv "${scriptlog}" "${scriptlogdate}"
+        touch "${consolelog}"
         mv "${consolelog}" "${consolelogdate}"
     fi
 
