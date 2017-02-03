@@ -4,8 +4,8 @@
 array_deps_missing=()
 array_deps_required=(curl wget util-linux python file gzip bzip2 \
                     tmux \
-                    glibc.i686 libstdc++.i686 \
-                    compat-libstdc++-33.i686 \
+                    glibc.i686 compat-libstdc++-33.i686 \
+                    libstdc++ libstdc++.i686 \
                     )
 
 fn_check_loop() {

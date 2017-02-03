@@ -11,7 +11,7 @@ defaultconfig="${defaultconfidir}/cod4-server.cfg"
 servercfgfullpath="${servercfgdir}/cod4-server.cfg"
 
 fn_cp_config_file() {
-    if [ -f "${defaultconfig}" ]; then
+    if [ ! -f "${defaultconfig}" ]; then
         echo "Please Get The Default Config File"
         exit 2
     else
